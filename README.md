@@ -1,30 +1,40 @@
 # posgtres
 Postgre Configuration Walkthrough
+
+Install PostGre
 ```
-//Install PostGre
 sudo apt-get update
 sudo apt-get install postgresql postgresql-contrib
 ``` 
+Install PgAdmin 3
+```
 sudo apt-get install pgadmin3
- 
-//Switch to the Postgres Role
+``` 
+```
+Switch to the Postgres Role
 sudo -i -u postgres
- 
-//Access Postgres Prompt
+``` 
+Access Postgres Prompt
+```
 psql
- 
-//Exit out of Postgres
+``` 
+
+Exit out of Postgres
+```
 postgres=# \q
- 
-//Create a New Database
+``` 
+
+Create a New Database
+```
 create database cc_hist;
- 
+``` 
 /*
 To log in with ident based authentication, you'll need a Linux user with the same name as your Postgres role and database. If you don't have a matching Linux user available, you can create one with the adduser command. You will have to do this from an account with sudo priveleges (not logged in as the postgres user):
 */
-//From outside of postgres
+From outside of postgres
+```
 sudo -u postgres createuser -s <<username>>
- 
+``` 
 //Give the user privileges to everything. Log in as the postgres role, then do:
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO <<username>>;
  
