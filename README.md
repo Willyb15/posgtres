@@ -1,9 +1,10 @@
 # posgtres
 Postgre Configuration Walkthrough
+```
 //Install PostGre
 sudo apt-get update
 sudo apt-get install postgresql postgresql-contrib
- 
+``` 
 sudo apt-get install pgadmin3
  
 //Switch to the Postgres Role
