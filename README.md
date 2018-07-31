@@ -10,8 +10,9 @@ Install PgAdmin 3
 ```
 sudo apt-get install pgadmin3
 ``` 
-```
+
 Switch to the Postgres Role
+```
 sudo -i -u postgres
 ``` 
 Access Postgres Prompt
