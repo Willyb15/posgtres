@@ -36,10 +36,13 @@ From outside of postgres
 sudo -u postgres createuser -s <<username>>
 ``` 
 //Give the user privileges to everything. Log in as the postgres role, then do:
+```
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO <<username>>;
- 
+``` 
 Once you have the appropriate account available, you can either switch over and connect to the database by typing:
+```
 sudo -i -u <<username>>
+```
 You will be logged in automatically assuming that all the components have been properly configured
  
 //List Databases
@@ -51,13 +54,16 @@ You will be logged in automatically assuming that all the components have been p
 //Connect to a database:
 \connect cc_hist;
  
-//Determine the current database:
+Determine the current database:
+```
 select current_database();
- 
+``` 
 //Create a table
+```
 CREATE TABLE article (
     article_id bigserial primary key,
     article_name varchar(20) NOT NULL,
     article_desc text NOT NULL,
     date_added timestamp default NULL
 );
+```
